@@ -7,7 +7,7 @@ public class LinkedListTester {
 		
 		LinkedList tester = new LinkedListImpl();
 		tester.addItem("an item to add");
-		
+		//cool comment
 
 	}
 
