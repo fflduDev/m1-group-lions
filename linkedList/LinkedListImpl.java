@@ -2,37 +2,95 @@ package linkedList;
 
 public class LinkedListImpl implements LinkedList {
 
+	ListItem head;
 	@Override
 	public Boolean isItemInList(String thisItem) {
 		// TODO Auto-generated method stub
-		return null;
+
+		ListItem current = head;
+		while (current != null) {
+			if (current.data.equals(thisItem)) {
+				return true;
+			}
+			current = current.next;
+		}
+		return false;
 	}
 
 	@Override
 	public Boolean addItem(String thisItem) {
 		
-		
-		System.out.println("hello from addItem in LinkedListImpl - the item passed in: " + thisItem);
+		if (head == null) {
+			head = new ListItem(thisItem);
+			return true;
+		}
+		else {
+			ListItem current = head;
+
+			while (current != null) {
+				if (current.data.equals(thisItem)) {
+					return false;
+				}
+				current = current.next;
+			}
+
+			current = head;
+			while (current.next != null) {
+				current = current.next;
+			}
+			current.next = new ListItem(thisItem);
+			return true;
+		}
 	
-		return null;
+
 	}
 
 	@Override
 	public Integer itemCount() {
-		// TODO Auto-generated method stub
-		return null;
+
+		ListItem current = head;
+		Integer count = 0;
+
+		while (current != null) {
+			current = current.next;
+			count++;
+		}
+		return count;
 	}
 
 	@Override
 	public void listItems() {
 		// TODO Auto-generated method stub
+
+		ListItem current = head;
+
+		while (current != null) {
+			System.out.println(current.data);
+			current = current.next;
+		}
 		
 	}
 
 	@Override
 	public Boolean deleteItem(String thisItem) {
-		// TODO Auto-generated method stub
-		return null;
+
+		if (head == null) {
+			return false;
+		}
+		else {
+			ListItem current = head;
+			while (current.next != null) {
+				if (current.next.data.equals(thisItem)) {
+					current.next = current.next.next;
+					return true;
+				}
+				else {
+					current = current.next;
+				}
+			}
+		}
+
+		return false;
 	}
 
 	@Override
