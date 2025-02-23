@@ -18,7 +18,6 @@ public interface LinkedList {
 	
 	//EC
 	public void sort();
-		// ascending alphanumeric sort; nothing fancy but ALTERS THE LIST, DOES NOT COPY.
 }
 
 // Implement this interface using class ListItem
