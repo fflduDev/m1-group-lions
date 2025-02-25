@@ -4,18 +4,20 @@ public class QueueTester {
 
 public static void runTests (Queue q) {
 
-	q.enQueue("Sally");
-	q.enQueue("Bob");
-	q.enQueue("Kevin");
+	q.deQueue();
+	q.peek();
+	q.enQueue("Sam");
 	q.enQueue("Bill");
-	q.enQueue("Marsha");
-	q.enQueue("Tom");
+	q.enQueue("Todd");
 	q.display();
 	q.peek();
 	q.deQueue();
 	q.display();
-	q.enQueue("Pat");
-	q.enQueue("Lily");
+	q.enQueue("Reynold");
+	q.enQueue("Lucy");
+	q.enQueue("Ryan");
+	q.enQueue("Jimmy");
+	q.enQueue("Pam");
 	q.peek();
 	q.deQueue();
 	q.display();

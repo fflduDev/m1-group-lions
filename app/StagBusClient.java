@@ -5,6 +5,7 @@ import linkedList.LinkedListImpl;
 import linkedList.LinkedListTester;
 import queue.Queue;
 import queue.QueueImpl;
+import queue.QueueTester;
 import stack.Stack;
 import stack.StackImpl;
 
@@ -38,13 +39,31 @@ public class StagBusClient {
 
 		System.out.println("-----S T A C K  T E S T------");
 
-		//QRunTestMethod...
-	 
-		System.out.println("----Q U E U E  T E S T-------");
-		
-
 		//StackRunTestMethod...
-		
+
+
+		System.out.println("----Q U E U E  T E S T-------");
+
+		System.out.println();
+		Queue queue = new QueueImpl();
+		//QRunTestMethod...
+		queue.enQueue("Sally");
+		queue.enQueue("Bob");
+		queue.enQueue("Kevin");
+		queue.enQueue("Bill");
+		queue.enQueue("Marsha");
+		queue.enQueue("Tom");
+		queue.display();
+		queue.peek();
+		queue.deQueue();
+		queue.display();
+		queue.enQueue("Pat");
+		queue.enQueue("Lily");
+		queue.peek();
+		queue.deQueue();
+		queue.display();
+
+
 	 	}
 
 }
