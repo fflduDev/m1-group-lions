@@ -150,25 +150,25 @@ public class LinkedListImpl implements LinkedList {
 	public void sort() {
 		// TODO Auto-generated method stub
 		if (head == null || head.next == null) {
-			return; // If the list is empty or has only one element, no need to sort
+			return;
 		}
 
-		boolean swapped = true; // To make sure we enter the loop at least once
+		boolean swapped = true;
 
 		while (swapped) {
 			swapped = false;
 			ListItem current = head;
 
-			// Traverse the list
+
 			while (current != null && current.next != null) {
 				if (current.data.compareTo(current.next.data) > 0) {
-					// Swap data between current and next if they are out of order
+
 					String temp = current.data;
 					current.data = current.next.data;
 					current.next.data = temp;
-					swapped = true; // A swap was made, so we need another pass
+					swapped = true;
 				}
-				current = current.next; // Move to the next node
+				current = current.next;
 			}
 		}
 	}
